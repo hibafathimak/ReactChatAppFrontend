@@ -2,7 +2,7 @@ import io from 'socket.io-client';
 import store from './redux/store';
 import { addMessage } from './redux/chatSlice';
 
-const socket = io('http://localhost:3000');
+const socket = io('https://reactchatappserver-oxv2.onrender.com');
 
 socket.on('message', (message) => {
   store.dispatch(addMessage(message));
